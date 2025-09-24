@@ -9,13 +9,10 @@ files_add = input("Enter files to add (separated by spaces, or leave empty for a
 if not files_add:
     files_add = "."
 
-# Stage files first
 run_cmd(f"git add {files_add}")
 
-# Commit with message
 run_cmd(f'git commit -m "feat: {commit_message}"')
 
-# Push to current branch instead of hardcoding "main"
 run_cmd("git push origin HEAD")
 
 print("✅ Changes have been committed and pushed.")
